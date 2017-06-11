@@ -26,10 +26,10 @@ bool insertElement(int arr[], int n, int pos, int key)
 
 bool deleteElement(int arr[], int n, int key)
 {
-	int pos = searchElement(key);
+	int pos = searchElement(arr,n,key);
 	if(pos == -1)
 		return -1;
-	for(int i=pos, i<n-1; ++i)
+	for(int i=pos; i<n-1; ++i)
 	{
 		arr[i] = arr[i+1];
 	}
